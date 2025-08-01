@@ -1,0 +1,113 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6e8ffc, #7bbcfe);  /* Gradient background */
+    color: #4b4949;
+    padding: 20px;
+    background-size: cover;  /* Ensures the background fills the screen */
+    background-position: center;
+}
+
+/* Adding a light background image behind the body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/static/images/image1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;  /* Adjust the opacity to make text readable */
+    z-index: -1;
+}
+
+/* Center and style the paragraph below the header */
+#form-container p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #0f0b0b;  /* White color for contrast against gradient background */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Container Styling */
+#form-container {
+    background-color: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #ffffff, #dfe6e9);  /* Light gradient for form container */
+    border: 3px solid #544caf;  /* Green border */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #333;  /* Label color */
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #66afe9;
+}
+
+button {
+    background-color: #0a3046;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2d5967;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #form-container {
+        width: 90%;
+    }
+}

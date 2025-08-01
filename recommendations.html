@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Exercises</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../static/recommendations.css">
+</head>
+<body>
+    <h1>Recommended Exercises</h1>
+    
+    <!-- Display the Goal, Gender, and Strength Level -->
+    <h2>Goal: <span>{{ goal }}</span></h2>
+    <h2>Gender: <span>{{ gender }}</span></h2>
+    <h2>Strength Level: <span>{{ strength_level }}</span></h2>
+
+    <h3>Generated Plan:</h3>
+    
+    <!-- Loop through each recommendation and display it on a new line -->
+    {% if recommendations %}
+        <div>
+            {% for recommendation in recommendations.splitlines() %}
+            <p>{{ recommendation | safe }}</p> 
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No recommendations available.</p>
+    {% endif %}
+
+    <!-- Link to go back to the homepage -->
+    <div class="form-group">
+        <button onclick="window.location.href='/'">Go Back</button>
+    </div>
+</body>
+</html>

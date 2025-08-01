@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6e8ffc, #7bbcfe);  /* Gradient background */
+    color: #4b4949;
+    padding: 20px;
+    background-size: cover;  /* Ensures the background fills the screen */
+    background-position: center;
+}
+
+/* Adding a light background image behind the body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../static/images/recommendation-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;  /* Adjust the opacity to make text readable */
+    z-index: -1;
+}
+
+/* Styling for the main heading (centered, bold, different font) */
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    font-size: 3em;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+/* Styling for subheadings like Goal, Gender, Strength Level (centered, bold) */
+h2, p strong {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Paragraph styling for the content */
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left;  /* Align the text to the left */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove asterisks and make content readable */
+p::before {
+    content: "";
+}
+
+/* Styling for the generated meal plan sections */
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+/* Styling for meal option details */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #fff;
+    text-align: left;
+}
+
+strong {
+    font-weight: bold;
+    color: #ffcc00; /* Highlight strong text with a golden color */
+}
+
+/* Button to go back styling */
+button {
+    display: inline-block;
+    margin-top: 40px;
+    text-align: center;
+    background-color: #0a3046;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d5967;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p, ul {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+}
