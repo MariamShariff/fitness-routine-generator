@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Set your Google Gemini API key
-api_key = 'AIzaSyCGwLLZ1UwFd0viHzjh-38ct-ddSlbpjmQ'  # Replace with your actual Google Gemini API key
+api_key = 'your api key'  # Replace with your actual Google Gemini API key
 genai.configure(api_key=api_key)
 
 @app.route('/')
@@ -70,3 +70,4 @@ def convert_bold(text):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
